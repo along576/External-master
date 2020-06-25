@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>营业执照</title>
+	<link rel="stylesheet" href="./assets/vendor/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="./assets/vendor/bootstrap.4.0.0.css">
+	<link rel="stylesheet" href="./assets/css/common.css">
+	<link rel="stylesheet" href="./assets/css/business.css">
+	<link rel="stylesheet" href="./assets/css/sass/upload-file-modal-component.min.css">
+	<link rel="stylesheet" href="./assets/vendor/animate.css">
+</head>
+
+<body>
+	<header class="header d-flex justify-content-between align-items-center">
+		<a href="公司信息.html">
+			<i class="fa fa-angle-left"></i>
+		</a>
+		<span>营业执照</span>
+		<div class="confiems">确定</div>
+	</header>
+	<section class="subject">
+		<!--上传营业执照-->
+		<div class="uploading d-flex justify-content-center">
+			<span>上传您的营业执照</span>
+		</div>
+		<!--营业执照-->
+		<div class="d-flex justify-content-center" data-toggle="modal" data-target="#upload-file-modal-component">
+			<!-- 元素 shell 上传成功添加success 失败error[fail] 图片是背景 请加在shell   -->
+			<!-- 示例 -->
+			<!-- <div class="shell success" style="background-image: url(../images/yingye.jpg) "/> -->
+			<div id="shell" class="shell ">
+				<div class="chinain">
+					<span>营</span><br />
+					<span>业</span><br />
+					<span>执</span><br />
+					<span>照</span>
+				</div>
+				<div class="updata d-flex align-items-center justify-content-center">
+					<!-- <div class="uploadPictures">上传</div> -->
+					<button type="button" class="btn btn-warning btn-xs">上传</button>
+				</div>
+			</div>
+		</div>
+		<div class="upload-file-modal-component">
+			<div class="modal fade" id="upload-file-modal-component" tabindex="-1" role="dialog"
+				aria-labelledby="upload-file-modal-component" aria-hidden="true">
+				<div class="flove-modal-dialog modal-dialog animated fadeInUp" role="document">
+					<div class="modal-content">
+						<div class="modal-body">
+							<input type="file" id="upolad-file" class="fade aria-hidden hide">
+							<div id="upolad" class="item d-flex align-items-center justify-content-center">
+								从相册中选取
+							</div>
+							<div class="item d-flex align-items-center justify-content-center" data-dismiss="modal">
+								取消
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+</body>
+<script type="text/javascript" src="./assets/vendor/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="./assets/js/main.js"></script>
+<script type="text/javascript" src="./assets/vendor/popper.js/dist/umd/popper.min.js"> </script>
+<script type="text/javascript" src="./assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+ 
+<script>
+	// 示例
+	(function(){
+		$('#upolad').on('click',(event)=>{
+			$('#upolad-file').click()
+		})
+	})()
+</script>
+</html>

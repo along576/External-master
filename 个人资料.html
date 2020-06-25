@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>个人资料</title>
+	<link rel="stylesheet" href="./assets/vendor/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="./assets/vendor/bootstrap.4.0.0.css">
+	<link rel="stylesheet" href="./assets/css/common.css">
+	<link rel="stylesheet" href="./assets/css/personalData.css">
+
+</head>
+
+<body>
+	<!--头部-->
+	<header class="header d-flex justify-content-between">
+		<a href="设置.html">
+			<i class="fa fa-angle-left"></i>
+		</a>
+		<span>个人资料</span>
+		<div>&nbsp;</div>
+	</header>
+	<div class="content-view" id="personal">
+		<!--个人头像-->
+		<div class="name personalIcon d-flex align-items-center justify-content-between"
+			@click="toggleModalMask(true,headPortrait)">
+			<div class="leftIcon d-flex flex-row">
+				<span>个人头像</span>
+			</div>
+			<div class="middleIcon">&nbsp;</div>
+			<div class="rightIcon">
+				<!--头像-->
+				<img src="assets/images/touxiang.png" />
+				<i id="click" class="fa fa-angle-right"></i>
+			</div>
+		</div>
+		<!--个人信息部分-->
+		<!--姓名-->
+		<div class="name d-flex align-items-center justify-content-between">
+			<div class="LeftName">
+				<span>姓名</span>
+			</div>
+			<div class="middleName">&nbsp;</div>
+			<div class="rightName">
+				<span>散仙</span>
+				<a href="姓名.html">
+					<i class="fa fa-angle-right"></i>
+				</a>
+			</div>
+		</div>
+		<!--性别-->
+		<div class="name d-flex align-items-center justify-content-between">
+			<div class="LeftName">
+				<span>性别</span>
+			</div>
+			<div class="middleName">&nbsp;</div>
+			<div class="rightName">
+				<span>男&nbsp;&nbsp;</span>
+				<a href="性别.html">
+					<i class="fa fa-angle-right"></i>
+				</a>
+			</div>
+		</div>
+		<!--出生日期-->
+		<div class="name d-flex align-items-center justify-content-between">
+			<div class="LeftName">
+				<span>出生日期</span>
+			</div>
+			<div class="middleName">&nbsp;</div>
+			<div class="rightName">
+				<span id="trigger1">未填写</span>
+				<a href="#">
+					<i class="fa fa-angle-right"></i>
+				</a>
+			</div>
+		</div>
+		<!--所在地-->
+		<div class="name d-flex align-items-center justify-content-between">
+			<div class="LeftName">
+				<span>所在地</span>
+			</div>
+			<div class="middleName">&nbsp;</div>
+			<div class="rightName">
+				<span>未填写</span>
+				<a href="所在地.html">
+					<i class="fa fa-angle-right"></i>
+				</a>
+			</div>
+		</div>
+		<!--手机号码-->
+		<div class="name d-flex align-items-center justify-content-between">
+			<div class="LeftName">
+				<span>手机号码</span>
+			</div>
+			<div class="middleName">&nbsp;</div>
+			<div class="rightName">
+				<span>未填写</span>
+				<a href="手机号码.html">
+					<i class="fa fa-angle-right"></i>
+				</a>
+			</div>
+		</div>
+		<!--邮箱-->
+		<div class="name d-flex align-items-center justify-content-between">
+			<div class="LeftName">
+				<span>邮箱</span>
+			</div>
+			<div class="middleName">&nbsp;</div>
+			<div class="rightName">
+				<span>未填写</span>
+				<a href="邮箱.html">
+					<i class="fa fa-angle-right"></i>
+				</a>
+			</div>
+		</div>
+		<!--工作经历-->
+		<div class="name d-flex align-items-center justify-content-between">
+			<div class="LeftName">
+				<span>工作经历</span>
+			</div>
+			<div class="middleName">&nbsp;</div>
+			<div class="rightName">
+				<span>未填写</span>
+				<a href="工作经历.html">
+					<i class="fa fa-angle-right"></i>
+				</a>
+			</div>
+		</div>
+		<!--教育背景-->
+		<div class="name d-flex align-items-center justify-content-between">
+			<div class="LeftName">
+				<span>教育背景</span>
+			</div>
+			<div class="middleName">&nbsp;</div>
+			<div class="rightName">
+				<span>未填写</span>
+				<a href="教育背景.html">
+					<i class="fa fa-angle-right"></i>
+				</a>
+			</div>
+		</div>
+
+		<!--公司信息部分-->
+		<section class="seaction">
+			<!--公司-->
+			<div class="name company d-flex align-items-center justify-content-between">
+				<div class="leftCompany">
+					<span>公司</span>
+				</div>
+				<div class="middleCompany">&nbsp;</div>
+				<div class="rightCompany">
+					<span>未填写</span>
+					<a href="公司.html">
+						<i class="fa fa-angle-right"></i>
+					</a>
+				</div>
+			</div>
+			<!--职位-->
+			<div class="name company d-flex align-items-center justify-content-between">
+				<div class="leftCompany">
+					<span>职位</span>
+				</div>
+				<div class="middleCompany">&nbsp;</div>
+				<div class="rightCompany">
+					<span>未填写</span>
+					<a href="职位.html">
+						<i class="fa fa-angle-right"></i>
+					</a>
+				</div>
+			</div>
+			<!--行业-->
+			<div class="name company d-flex align-items-center justify-content-between">
+				<div class="leftCompany">
+					<span>行业</span>
+				</div>
+				<div class="middleCompany">&nbsp;</div>
+				<div class="rightCompany">
+					<span>未填写</span>
+					<a href="行业.html">
+						<i class="fa fa-angle-right"></i>
+					</a>
+				</div>
+			</div>
+			<!--公司地址-->
+			<div class="name company d-flex align-items-center justify-content-between">
+				<div class="leftCompany">
+					<span>公司地址</span>
+				</div>
+				<div class="middleCompany">&nbsp;</div>
+				<div class="rightCompany">
+					<span>未填写</span>
+					<a href="公司地址.html">
+						<i class="fa fa-angle-right"></i>
+					</a>
+				</div>
+			</div>
+			<!--网址-->
+			<div class="name company d-flex align-items-center justify-content-between">
+				<div class="leftCompany">
+					<span>网址</span>
+				</div>
+				<div class="middleCompany">&nbsp;</div>
+				<div class="rightCompany">
+					<span>未填写</span>
+					<a href="网址.html">
+						<i class="fa fa-angle-right"></i>
+					</a>
+				</div>
+			</div>
+		</section>
+		<!--团队部分-->
+		<section class="seaction">
+			<div class="name company d-flex align-items-center justify-content-between">
+				<div class="leftCompany">
+					<span>团队信息</span>
+				</div>
+				<div class="middleCompany">&nbsp;</div>
+				<div class="rightCompany">
+					<span>未填写</span>
+					<a href="团队信息.html">
+						<i class="fa fa-angle-right"></i>
+					</a>
+				</div>
+			</div>
+
+			<!--从相册中选择-取消-->
+
+
+
+		</section>
+		<div class="modal-mask" v-show="isModalMask" @click="toggleModalMask(false,headPortrait)">
+			<!-- <div class="showHide">
+								<div class="photo d-flex align-items-center justify-content-center">
+									<span>从相册中选取</span>
+								</div>
+								 
+								<div class="cancel d-flex align-items-center justify-content-center">
+									<a href="./个人资料.html">
+										<span>取消</span>
+									</a>
+								</div>
+							</div> -->
+
+
+		</div>
+
+		<!-- 头像 -->
+		<div class="modal-cancel" id="head-portrait" v-show="headPortrait.status">
+			<div class="photo d-flex align-items-center justify-content-center" @click="upfile()">
+				<input type="file" class="hide" name="file" id="head-portrait-file" :value="headPortrait.url">
+				<span>从相册中选取</span>
+			</div>
+
+			<div class="cancel d-flex align-items-center justify-content-center"
+				@click="toggleModalMask(false,headPortrait)">
+				<a href="./个人资料.html">
+					<span>取消</span>
+				</a>
+			</div>
+		</div>
+		<!-- 性别 -->
+		<div class="modal-cancel">
+
+		</div>
+		<!-- 出生日期 -->
+		<div class="modal-cancel">
+
+		</div>
+		<!-- 所在地 -->
+		<div class="modal-cancel">
+
+		</div>
+
+	</div>
+
+
+
+</body>
+<script type="text/javascript" src="./assets/vendor/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="./assets/js/main.js"></script>
+<script type="text/javascript" src="./assets/vendor/popper.js/dist/umd/popper.min.js"> </script>
+<script type="text/javascript" src="./assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<script>
+
+</script>
+
+</html>

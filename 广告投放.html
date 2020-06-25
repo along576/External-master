@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>广告投放</title>
+	<link rel="stylesheet" href="./assets/vendor/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="./assets/vendor/bootstrap.4.0.0.css">
+	<link rel="stylesheet" href="./assets/css/common.css">
+	<link rel="stylesheet" href="./assets/vendor/layui/css/layui.css">
+	<link rel="stylesheet" href="./assets/vendor/layui/css/layui.mobile.css">
+	<link rel="stylesheet" href="./assets/css/putting.css">
+</head>
+
+<body>
+	<!--头部-->
+	<header class="header d-flex justify-content-between d-flex align-items-center phone-head">
+		<a href="">
+			<i class="fa fa-angle-left"></i>
+		</a>
+		<span>广告投放</span>
+		<div>&nbsp;</div>
+	</header>
+	<!--上传广告图-->
+	<section class="advertisementPhoto">
+		<div class="upPhoto">
+			<span>上传广告图（尺寸750x250px)</span>
+		</div>
+		<div class="d-flex justify-content-center">
+			<div class="homePage d-flex justify-content-center">
+				<div class="advertisingPosition">
+					<span>首页广告位</span>
+					<div class="uupdata d-flex justify-content-center">
+						<div class="updata d-flex align-items-center justify-content-center">
+							<div class="uploadPictures">上传</div>
+							<input type="file" class="hide">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--投放价格-->
+		<div class="price">
+			<span>投放价格：18.00元/天</span>
+		</div>
+		<!--投放时间-->
+		<div class="upttingTime d-flex flex-wrap-nowrap align-items-center">
+			<div class="time">
+				<span>投放时间：</span>
+			</div>
+			<div class="begin d-flex align-items-center justify-content-center">
+
+				<input type="text" id="start-date" class="layui-input flove" placeholder="请选择">
+			</div>
+			<div class="arrive">
+				<span>至</span>
+			</div>
+			<div class="finish d-flex align-items-center justify-content-center">
+
+				<input type="text" id="end-date" class="layui-input flove" placeholder="请选择">
+			</div>
+		</div>
+		<!--支付金额-->
+		<div class="paymentAmount d-flex flex-wrap-nowrap">
+			<div class="payment">
+				<span>支付金额：</span>
+			</div>
+			<div class="amount">
+				<span><small>￥</small><b>36</b></span>
+			</div>
+		</div>
+	</section>
+
+	<!--支付方式-->
+	<section class="modeOfPayment">
+		<div class="modeOfPaymentChild">
+			<span>支付方式</span>
+		</div>
+		<!--微信支付-->
+		<div class="d-flex flex-wrap-nowrap align-items-center justify-content-between">
+			<div class="wechat d-flex flex-wrap-nowrap align-items-center">
+				<img src="assets/images/wechat.jpg" />
+				<div class="wechatFont">
+					<span>微信支付</span>
+				</div>
+			</div>
+			<div class="selectPayment">
+				&nbsp;
+			</div>
+		</div>
+		<!--支付宝支付-->
+		<div class="d-flex flex-wrap-nowrap align-items-center justify-content-between">
+			<div class="wechat d-flex flex-wrap-nowrap align-items-center">
+				<img src="assets/images/alipay.jpg" />
+				<div class="wechatFont">
+					<span>支付宝</span>
+				</div>
+			</div>
+			<div class="havaPaid">
+				<img src="assets/images/checked.jpg" />
+			</div>
+		</div>
+	</section>
+	<!--确认支付-->
+	<section class="d-flex justify-content-center">
+		<div class="confirmPay d-flex justify-content-center align-items-center">
+			<span><strong>确认支付</strong></span>
+		</div>
+	</section>
+
+</body>
+<script type="text/javascript" src="./assets/vendor/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="./assets/js/main.js"></script>
+<script type="text/javascript" src="./assets/vendor/layui/layui.js"></script>
+<script type="text/javascript">
+	(function () {
+		layui.use('laydate', function () {
+			// let [laydate] = layui
+			var laydate = layui.laydate
+			laydate.render({
+				elem: '#start-date'
+			})
+			laydate.render({
+				elem: '#end-date'
+			})
+		})
+	})();
+</script>
+
+</html>
